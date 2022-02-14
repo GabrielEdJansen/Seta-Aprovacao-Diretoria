@@ -712,12 +712,18 @@ function _saveData(data, info) {
 
     let CheckIntegraTitulo = document.querySelector('#CheckIntegraTitulo').checked
     let CheckNaoIntegraTitulo = document.querySelector('#CheckNaoIntegraTitulo').checked
+    let CheckCancelaIntegraTitulo = document.querySelector('#CheckCancelaIntegraTitulo').checked
 
     if (CheckIntegraTitulo == true) {
         newData.AprovDir = "S";
+        newData.cancelarSolicitacao = "N";
     }
     if (CheckNaoIntegraTitulo == true) {
         newData.AprovDir = "N";
+        newData.cancelarSolicitacao = "N";
+    }
+    if (CheckCancelaIntegraTitulo == true) {
+        newData.cancelarSolicitacao = "S";
     }
 
     console.log(newData);
